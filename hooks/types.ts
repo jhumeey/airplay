@@ -5,6 +5,6 @@ export type Resource = {
   name: string;
   link: string;
   tag: string;
-  imageURL: string;
+  imageUrl: string;
   description: string
 }
