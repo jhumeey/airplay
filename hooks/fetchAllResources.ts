@@ -3,7 +3,7 @@ import { Resource } from './types';
 
 export const fetchAllResources = async () => {
   const { data, error} = await supabase
-  .from<Resource>('resources')
+  .from<Resource>('Resources')
   .select(`*`, { count: 'exact' })
   return {data, error};
 }

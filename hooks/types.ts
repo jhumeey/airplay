@@ -1,10 +1,10 @@
 export type Resource = {
-  id: number;
-  inserted_at: string;
+  id: string;
+  created_at: string;
   updated_at: string;
   name: string;
   link: string;
   tag: string;
-  image: string;
+  imageURL: string;
   description: string
 }

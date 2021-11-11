@@ -2,9 +2,9 @@ export type CardDetails = {
   name: string,
   link: string,
   tag: string,
-  image: string,
+  imageUrl: string,
   description: string,
-  inserted_at: string,
+  created_at: string,
   updated_at: string,
 }
 
