@@ -24,6 +24,7 @@
     "micro": "^9.3.4",
     "micro-cors": "^0.1.1",
     "next": "^11.1.2",
+    "next-auth": "^4.0.0-beta.6",
     "next-themes": "^0.0.15",
     "nexus": "^1.1.0",
     "react": "^17.0.2",
@@ -31,6 +32,7 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-query": "^3.26.0",
     "react-toastify": "^8.0.3",
+    "swr": "^1.0.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {
@@ -38,6 +40,7 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "autoprefixer": "^10.3.6",
+    "babel-plugin-superjson-next": "^0.4.2",
     "postcss": "^8.3.8",
     "prisma": "^3.4.0",
     "tailwindcss": "^2.2.16",
