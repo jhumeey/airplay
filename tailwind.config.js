@@ -16,7 +16,6 @@ module.exports = {
       },
       colors: {
         black: {
-          // "brand-01":"#111111",
           "brand-01":"#000308",
           "brand-02": "#1C1C1C",
           "brand-03": "#ffffff40",
@@ -26,6 +25,7 @@ module.exports = {
           "brand-07": "rgba(255, 255, 255, 0.12)",
           "brand-08": "#0D1117",
           "brand-smoke": 'rgba(0, 0, 0, 0.78)',
+          "brand-09": "#0b0b0f",
         },
         blue: {
           "brand-01": "#168FFF",
@@ -36,7 +36,8 @@ module.exports = {
         },
         gray: {
           "brand-01": "#b3b3b3",
-          "brand-02": "#8B949E"
+          "brand-02": "#8B949E",
+          "brand-03": "#181921",
         }
       },
       keyframes: {

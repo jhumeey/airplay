@@ -5,7 +5,7 @@ import Head from "next/head";
 import { SWRConfig } from "swr";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../styles/index.css";
+import "../styles/globals.css";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;

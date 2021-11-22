@@ -8,7 +8,7 @@ const ResourceCard = ({ item }: ItemProps) => {
           <div className="w-full flex items-center">
             {item.imageUrl ? (
               <div className="w-12 h-12 mx-2 flex items-center justify-center">
-                <img className=" h-10 w-10 rounded-full" src={item.imageUrl && item.imageUrl} />
+                <img className=" h-10 w-10 rounded-full" src={item.imageUrl && item.imageUrl}  alt="logo"/>
               </div>
             ) : (
               <div className="bg-black-brand-03 rounded-full h-12 w-12 p-2 mx-2 text-green-brand-01 flex items-center justify-center">{`${item.name[0]}${item.name[1]}`.toUpperCase()}</div>

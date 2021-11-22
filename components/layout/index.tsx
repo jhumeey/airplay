@@ -12,7 +12,7 @@ const Layout = ({ children }: any) => {
     setToogleNavBar(!toggleNav);
   };
   return (
-    <main className="flex flex-col min-h-screen text-base subpixel-antialiased font-normal bg-black-brand-01 lg:flex-row">
+    <main className="flex flex-col min-h-screen text-base subpixel-antialiased font-normal bg-black-brand-09 lg:flex-row">
       <DashMobileNavbar toggleNavBar={toggleNavBar} />
       <Sidebar toggleState={toggleNav} toggleNavBar={toggleNavBar} />
       <div className="flex flex-col flex-1 px-4 py-4 overflow-hidden lg:py-8 lg:px-6 xl:px-8">
