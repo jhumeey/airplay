@@ -1,21 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  font-family: Inter, 'sans-serif';
+  font-family: 'Urbanist', sans-serif;
+  /* font-family: 'Sora', sans-serif; */
 }
 
-.side-links li::before {
+/* .side-links li::before {
   content: "\2022";
   color: #3fd080;
-  /* backgound: #8b949e; */
   font-weight: bold;
   display: inline-block; 
   width: 1.5em;
   margin-left: -1em;
-}
+} */
 
 .resource-card-tag::before {
   border: 2px solid #3fd080;
