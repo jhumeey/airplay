@@ -26,20 +26,20 @@ const LandingPage = () => {
         />
         <title>Web Dev</title>
       </Head>
-      <main className="flex flex-col w-full bg-black-brand-01 font-inter overflow-hidden">
+      <main className="flex flex-col w-full bg-black-brand-01 overflow-hidden">
         <div className="container px-4 mx-auto my-4">
           <Navbar />
         </div>
         <div className="text-gray-600 body-font h-100 container md:px-4 mx-auto">
           <section className="text-center py-20 relative">
-            <h1 className="font-sans text-3xl md:text-6xl text-white py-4">
+            <h1 className="text-3xl md:text-6xl text-white py-4">
               Unlock Over 500+ FREE Web Resources
             </h1>
             <p className="text-xl text-gray-brand-02 py-4">
               Discover amazing web development resources packed in one place.
             </p>
             <Link href="/resources">
-              <a className="transition duration-500 ease-in-out bg-green-brand-01 rounded text-black-brand-01 px-7 py-3 my-4 inline-block hover:bg-green-600 transform hover:-translate-y-1 hover:scale-110 ">
+              <a className="font-medium text-lg transition duration-500 ease-in-out bg-green-brand-01 rounded text-black-brand-01 px-7 py-3 my-4 inline-block hover:bg-green-600 transform hover:-translate-y-1 hover:scale-110 ">
                 Dive In
               </a>
             </Link>
@@ -80,7 +80,7 @@ const LandingPage = () => {
               </div>
               <div className="grid grid-flow-row auto-rows-fr md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 -m-4">
                 <div className="p-4 min-h-full">
-                  <div className="p-6 rounded-lg h-full bg-black-brand-08">
+                  <div className="p-6 rounded-lg h-full border border-gray-brand-03 rounded-md">
                     <div className="w-10 h-10 inline-flex items-center justify-center bg-indigo-100  rounded-full mb-4">
                       <Image src={ellipse} />
                     </div>
@@ -96,7 +96,7 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="p-4 min-h-full">
-                  <div className="p-6 rounded-lg h-full bg-black-brand-08">
+                  <div className="p-6 rounded-lg h-full border border-gray-brand-03 rounded-md">
                     <div className="flex-1">
                       <div className="w-10 h-10 inline-flex items-center justify-center bg-indigo-100 rounded-full mb-4">
                         <Image src={ellipse} />
@@ -112,7 +112,7 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="p-4 min-h-full">
-                  <div className="p-6 rounded-lg h-full bg-black-brand-08">
+                  <div className="p-6 rounded-lg h-full border border-gray-brand-03 rounded-md">
                     <div className="w-10 h-10 inline-flex items-center justify-center bg-indigo-100  rounded-full mb-4">
                       <Image src={ellipse} />
                     </div>
@@ -125,7 +125,7 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="p-4 min-h-full">
-                  <div className="p-6 rounded-lg h-full bg-black-brand-08">
+                  <div className="p-6 rounded-lg h-full border border-gray-brand-03 rounded-md">
                     <div className="w-10 h-10 inline-flex items-center justify-center bg-indigo-100  rounded-full mb-4">
                       <Image src={ellipse} />
                     </div>
@@ -138,7 +138,7 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="p-4 min-h-full">
-                  <div className="p-6 rounded-lg h-full bg-black-brand-08">
+                  <div className="p-6 rounded-lg h-full border border-gray-brand-03 rounded-md">
                     <div className="w-10 h-10 inline-flex items-center justify-center bg-indigo-100  rounded-full mb-4">
                       <Image src={ellipse} />
                     </div>
@@ -152,7 +152,7 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className="p-4 min-h-full">
-                  <div className="p-6 rounded-lg h-full bg-black-brand-08">
+                  <div className="p-6 rounded-lg h-full border border-gray-brand-03 rounded-md">
                     <div className="w-10 h-10 inline-flex items-center justify-center bg-indigo-100  rounded-full mb-4">
                       <Image src={ellipse} />
                     </div>
@@ -170,14 +170,8 @@ const LandingPage = () => {
           </section>
           <section className="text-gray-brand-01 body-font">
             <div className="container md:px-5 py-24 mx-auto">
-              <h2 className="text-green-brand-01 text-3xl md:text-4xl font-bold text-center py-2 mb-4">Fueler Web Resources In Numbers</h2>
-              <div className="grid gap-4 grid-cols-1 md:grid-cols-3 text-center py-4">
-                <div className="p-4">
-                  <h2 className="title-font text-white font-medium sm:text-4xl text-3xl">
-                    100+
-                  </h2>
-                  <p className="leading-relaxed">Users</p>
-                </div>
+              <h2 className="text-green-brand-01 text-3xl md:text-4xl font-medium text-center py-2 mb-4">WebScout In Numbers</h2>
+              <div className="grid gap-4 grid-cols-1 md:grid-cols-2 text-center py-4">
                 <div className="p-4">
                   <h2 className="title-font text-white font-medium sm:text-4xl text-3xl">
                     500+ 
@@ -227,7 +221,7 @@ const LandingPage = () => {
               </li>
             </ul>
             <ul className="space-y-1 text-gray-brand-02">
-              <li className="pb-4 text-green-brand-01">Other Products</li>
+              <li className="pb-4 text-green-brand-01">Products</li>
               <li>
                 <a href="#" className="hover:underline">
                   Dope UI
@@ -264,7 +258,7 @@ const LandingPage = () => {
             </ul>
           </footer>
           <div className="text-center">
-            <p className="text-base py-6">Made with ❤️ by Minna</p>
+            <p className="text-lg font-medium py-6">Developed by Minna  ❤️ </p>
           </div>
         </div>
       </main>
