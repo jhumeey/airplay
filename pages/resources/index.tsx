@@ -3,10 +3,11 @@ import Layout from "../../components/layout";
 import Image from "next/image";
 import prisma from "../../lib/prisma";
 import ResourceCard from "../../components/cards/ResourceCard";
-import { IndexProps } from "../../types/fetchData";
+import { ResourcesProps } from "../../types/fetchData";
 import Loader from "../../public/images/three-dot-loader.svg";
+import { GetStaticProps } from "next";
 
-export default function Dashboard({ resources }: IndexProps) {
+export default function Dashboard({ resources }: ResourcesProps) {
   return (
     <div>
       {!resources ? (
@@ -33,7 +34,7 @@ Dashboard.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>;
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps =   async ()  => {
   const resources = await prisma.resources.findMany({
     select: {
       id: true,

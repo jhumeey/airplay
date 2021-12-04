@@ -1,4 +1,5 @@
 import { ItemProps } from "./types";
+import { fetchTagColor } from "../../utils/generateColor";
 
 const ResourceCard = ({ item }: ItemProps) => {
   return (
@@ -6,7 +7,7 @@ const ResourceCard = ({ item }: ItemProps) => {
       <div className="p-3 flex flex-col flex-1">
         <div className="flex flex-wrap justify-between">
           <div className="w-full flex items-center justify-between">
-            {item.imageUrl ? (
+            {/* {item.imageUrl ? (
               <div className="w-12 h-12 mx-2 flex items-center justify-center">
                 <img
                   className=" h-10 w-10 rounded-full"
@@ -18,22 +19,23 @@ const ResourceCard = ({ item }: ItemProps) => {
               <div className="bg-black-brand-03 rounded-full h-12 w-12 p-2 mx-2 text-green-brand-01 flex items-center justify-center">
                 {`${item.name[0]}${item.name[1]}`.toUpperCase()}
               </div>
-            )}
+            )} */}
+            
             <h2 className="text-lg break-all mx-1 text-white">{item.name}</h2>
             <div>
             <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
                 d="M17.25 15.25V6.75H8.75"
               ></path>
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
                 d="M17 7L6.75 17.25"
               ></path>
             </svg>
@@ -43,17 +45,19 @@ const ResourceCard = ({ item }: ItemProps) => {
         </div>
         <div className="flex flex-col flex-1 px-2 my-2">
           {" "}
-          <p className="font-light text-base text-opacity-50 flex-1">
+          <p className="font-normal text-base text-opacity-50 flex-1">
             {item.description}
           </p>
         </div>
       </div>
       <div className="px-4 py-2 flex flex-col items-end">
-        <div>
-          <span className="text-sm flex items-center font-medium text-gray-brand-02 resource-card-tag capitalize">
+        <div className="flex items-center">
+          {/* Empty div ==> Decorative purpose */}
+          <div className={`h-3 w-3 border-2 mr-1 border-${fetchTagColor(item.tag)} rounded-full`}></div>
+          <div className="text-base flex items-center font-medium text-gray-brand-02 resource-card-tag capitalize">
             {" "}
             {item.tag}
-          </span>
+          </div>
         </div>
       </div>
     </li>

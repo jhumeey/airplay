@@ -11,6 +11,7 @@ const Layout = ({ children }: any) => {
   const toggleNavBar = () => {
     setToogleNavBar(!toggleNav);
   };
+  
   return (
     <main className="flex flex-col min-h-screen text-base subpixel-antialiased font-normal bg-black-brand-09 lg:flex-row">
       <DashMobileNavbar toggleNavBar={toggleNavBar} />
@@ -45,7 +46,9 @@ const Layout = ({ children }: any) => {
           </div>
         </div>
         <ResourceModal showModal={showModal} setShowModal={setShowModal} />
-        <div className="flex-1 py-4 lg:py-10">{children}</div>
+        <div className="flex-1 py-4 lg:py-10">
+          {children}
+        </div>
       </div>
     </main>
   );

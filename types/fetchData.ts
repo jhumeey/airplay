@@ -10,6 +10,6 @@ export type Resource = {
   description: string
 }
 
-export interface IndexProps {
+export interface ResourcesProps {
   resources: Resource[]
 }

@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Satoshi', sans-serif;
   /* font-family: 'Sora', sans-serif; */
 }
 
@@ -18,14 +16,4 @@ html {
   margin-left: -1em;
 } */
 
-.resource-card-tag::before {
-  border: 2px solid #3fd080;
-  content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: transparent;
-  margin-right: 4px;
-}
 
