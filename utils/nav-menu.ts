@@ -14,13 +14,18 @@ export const sidebarLinks: Menu[] = [
   {
     name: "Icons",
     path: "/resources/icons",
-    param: "icons"
+    param: "icon"
   },
   {
     name: "Fonts",
     path: "/resources/fonts",
-    param: "fonts"
+    param: "font"
   }, 
+  {
+    name: "Podcast",
+    path: "/resources/podcasts",
+    param: "podcast"
+  },
   {
     name: "Hosting",
     path: "/resources/hosting",
@@ -38,7 +43,7 @@ export const sidebarLinks: Menu[] = [
   },
   {
     name: "Photos",
-    path: "/resources/quality-photos",
+    path: "/resources/photos",
     param: "quality-photos"
   },
   {
@@ -68,7 +73,7 @@ export const sidebarLinks: Menu[] = [
   },
   {
     name: "Youtube Channels",
-    path: "/resources/youtube-channels",
+    path: "/resources/youtube",
     param: "youtube-channels"
   },
   {
@@ -83,7 +88,7 @@ export const sidebarLinks: Menu[] = [
   },
   {
     name: "Chrome Extensions",
-    path: "/resources/chrome-extensions",
+    path: "/resources/extensions",
     param: "chrome-extensions"
   },
   

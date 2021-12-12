@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors')
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   options: {
@@ -34,6 +35,7 @@ module.exports = {
         blue: {
           "brand-01": "#168FFF",
           "brand-tag": "#2196f3",
+          "brand-02": "#0E5FB0"
         },
         green: {
           "brand-01": "#3fd080",
@@ -44,7 +46,14 @@ module.exports = {
           "brand-01": "#b3b3b3",
           "brand-02": "#8B949E",
           "brand-03": "#181921",
+        },
+        orange: colors.orange,
+        lime: colors.lime,
+        teal: colors.teal,
+        brown: {
+          "brand-01": "#453A49"
         }
+
       },
       keyframes: {
         rubber_band: {

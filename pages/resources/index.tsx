@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import Image from "next/image";
 import prisma from "../../lib/prisma";
 import ResourceCard from "../../components/cards/ResourceCard";
+import FilterBox from "../../components/filter/FilterBox";
 import { ResourcesProps } from "../../types/fetchData";
 import Loader from "../../public/images/three-dot-loader.svg";
 import { GetStaticProps } from "next";
@@ -15,16 +16,19 @@ export default function Dashboard({ resources }: ResourcesProps) {
           <Image src={Loader} />
         </div>
       ) : (
-        <ul
-          role="list"
-          className={
-            "grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 overflow-y-auto py-4"
-          }
-        >
-          {resources.map((item) => (
-            <ResourceCard key={item.name} item={item} />
-          ))}
-        </ul>
+        <div className="flex flex-col">
+          <FilterBox />
+          <ul
+            role="list"
+            className={
+              "grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 overflow-y-auto py-4"
+            }
+          >
+            {resources.map((item) => (
+              <ResourceCard key={item.name} item={item} />
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );

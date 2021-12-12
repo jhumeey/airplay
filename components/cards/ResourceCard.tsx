@@ -20,30 +20,29 @@ const ResourceCard = ({ item }: ItemProps) => {
                 {`${item.name[0]}${item.name[1]}`.toUpperCase()}
               </div>
             )} */}
-            
-            <h2 className="text-lg break-all mx-1 text-white">{item.name}</h2>
+
+            <h2 className="text-lg break-all text-white">{item.name}</h2>
             <div>
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="M17.25 15.25V6.75H8.75"
-              ></path>
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="M17 7L6.75 17.25"
-              ></path>
-            </svg>
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  d="M17.25 15.25V6.75H8.75"
+                ></path>
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  d="M17 7L6.75 17.25"
+                ></path>
+              </svg>
+            </div>
           </div>
-          </div>
-         
         </div>
-        <div className="flex flex-col flex-1 px-2 my-2">
+        <div className="flex flex-col flex-1 my-2">
           {" "}
           <p className="font-normal text-base text-opacity-50 flex-1">
             {item.description}
@@ -53,7 +52,11 @@ const ResourceCard = ({ item }: ItemProps) => {
       <div className="px-4 py-2 flex flex-col items-end">
         <div className="flex items-center">
           {/* Empty div ==> Decorative purpose */}
-          <div className={`h-3 w-3 border-2 mr-1 border-${fetchTagColor(item.tag)} rounded-full`}></div>
+          <div
+            className={`h-3 w-3 border-2 mr-1 border-${fetchTagColor(
+              item.tag
+            )} rounded-full`}
+          ></div>
           <div className="text-base flex items-center font-medium text-gray-brand-02 resource-card-tag capitalize">
             {" "}
             {item.tag}

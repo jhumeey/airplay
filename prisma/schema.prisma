@@ -48,6 +48,7 @@ model SuggestedResources {
 }
 
 
+
 model Account {
   id                 Int       @default(autoincrement()) @id
   compoundId         String    @unique @map(name: "compound_id")
