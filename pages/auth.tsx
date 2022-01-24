@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import { toast } from 'react-toastify'
-import { supabase } from '../utils/supabase'
+import { useState } from 'react';
+import { toast } from 'react-toastify';
+import { supabase } from '../utils/supabase';
+import LoginForm from '../components/forms/login';
 
 export default function Auth() {
   const [loading, setLoading] = useState(false)
@@ -20,8 +21,9 @@ export default function Auth() {
   }
 
   return (
-    <div className="row flex flex-center">
-      <div className="col-6 form-widget">
+    <div className="flex flex-col justify-center items-center bg-white min-h-screen w-full">
+      <LoginForm />
+      {/* <div className="col-6 form-widget">
         <h1 className="header">Supabase + Next.js</h1>
         <p className="description">Sign in via magic link with your email below</p>
         <div>
@@ -45,7 +47,7 @@ export default function Auth() {
             <span>{loading ? 'Loading' : 'Send magic link'}</span>
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

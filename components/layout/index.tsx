@@ -1,19 +1,19 @@
-import * as React from "react";
-import { GetStaticProps } from "next";
-import prisma from "../../lib/prisma";
-import DashMobileNavbar from "../navbar/DashMobileNavbar";
-import Sidebar from "../navbar/Sidebar";
-import DashTopBar from "../navbar/DashTopBar";
-import ResourceModal from "../modals/SuggestResourceModal";
+import * as React from 'react';
+import { GetStaticProps } from 'next';
+import prisma from '../../lib/prisma';
+import DashMobileNavbar from '../navbar/DashMobileNavbar';
+import Sidebar from '../navbar/Sidebar';
+import DashTopBar from '../navbar/DashTopBar';
+import ResourceModal from '../modals/SuggestResourceModal';
 
-const Layout = ({ children }: any) => {
+function Layout({ children }: any) {
   const [toggleNav, setToogleNavBar] = React.useState(false);
   const [showModal, setShowModal] = React.useState(false);
 
   const toggleNavBar = () => {
     setToogleNavBar(!toggleNav);
   };
-  
+
   return (
     <main className="flex flex-col min-h-screen text-base subpixel-antialiased font-normal bg-black-brand-09 lg:flex-row">
       <DashMobileNavbar toggleNavBar={toggleNavBar} />
@@ -27,7 +27,5 @@ const Layout = ({ children }: any) => {
       </div>
     </main>
   );
-};
+}
 export default Layout;
-
-

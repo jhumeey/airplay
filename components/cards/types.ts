@@ -8,7 +8,6 @@ export type CardDetails = {
   updatedAt: string,
 }
 
-
 export interface ItemProps {
   item: CardDetails
 }
