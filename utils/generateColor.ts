@@ -1,22 +1,35 @@
 export const fetchTagColor = (tag: string) => {
+  let color: string;
   switch (tag){
-    case 'CSS':
-      return 'blue-400';
+    case 'css':
+       color = 'blue-400';
+       break;
     case 'fonts':
-      return 'green-brand-01';
+      color = 'green-brand-01';
+      break;
     case 'hosting':
-      return 'purple-400';
+      color = 'purple-400';
+      break;
     case 'icons':
-      return 'yellow-300';
+      color = 'yellow-300';
+      break;
     case 'colors':
-      return 'pink-300';
+      color = 'pink-300';
+      break;
     case 'podcasts':
-      return 'indigo-800';
+      color = 'indigo-800';
+      break;
     case 'photos':
-      return 'red-400';
+      color = 'red-400';
+      break;
     case 'extensions':
-      return 'blue-brand-02';
+      color = 'blue-brand-02';
+      break;
+    case 'youtube':
+      color = 'gray-brand-02';
+      break;
     default:
-      return 'green-brand-01';
+      color = 'green-brand-01';
   }
+  return color;
 };
