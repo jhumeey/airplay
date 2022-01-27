@@ -326,7 +326,7 @@ const LandingPage = () => {
             </div>
           </section>
           <section className="text-gray-brand-01 body-font">
-            <div className="container md:px-5 py-24 mx-auto">
+            {/* <div className="container md:px-5 py-24 mx-auto">
               <h2 className="text-green-brand-01 text-3xl md:text-4xl font-medium text-center py-2 mb-4">
                 WebScout In Numbers
               </h2>
@@ -344,7 +344,42 @@ const LandingPage = () => {
                   <p className="leading-relaxed">Contributions</p>
                 </div>
               </div>
+            </div> */}
+            <div className="py-20 px-6 2xl:container 2xl:mx-auto">
+            <div className="flex flex-wrap justify-between">
+                <div className="lg:w-1/3 flex flex-col lg:items-center lg:justify-center">
+                    <h1 className="md:text-5xl text-2xl lg:text-4xl xl:text-5xl font-semibold leading-tight text-gray-800">Statistics is the Grammer of science</h1>
+                    <p className="text-base leading-normal text-gray-600 mt-4">It's important to understand what all the costs associated with a product or service are, because you need to know that you're making a reasonable margin</p>
+                </div>
+                <div className="xl:w-1/2 lg:w-7/12 w-full grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 sm:justify-center sm:items-center  lg:mt-0 mt-8">
+                    <div className="bg-indigo-700 shadow rounded xl:w-72  w-full h-72 flex justify-center items-center">
+                        <div className="text-center">
+                            <p className="text-5xl font-semibold leading-10 text-white">50+</p>
+                            <p className="text-base font-medium leading-none text-white mt-4">loss per month</p>
+                        </div>
+                    </div>
+                    <div className="bg-indigo-700 shadow rounded xl:w-72  w-full h-72 flex justify-center items-center">
+                        <div className="text-center">
+                            <p className="text-5xl font-semibold leading-10 text-white">200+</p>
+                            <p className="text-base font-medium leading-none text-white mt-4">Revenue generated per month</p>
+                        </div>
+                    </div>
+
+                    <div className="bg-indigo-700 shadow rounded xl:w-72  w-full h-72 flex justify-center items-center">
+                        <div className="text-center">
+                            <p className="text-5xl font-semibold leading-10 text-white">150+</p>
+                            <p className="text-base font-medium leading-none text-white mt-4">Profit Generated</p>
+                        </div>
+                    </div>
+                    <div className="bg-indigo-700 shadow rounded xl:w-72  w-full h-72 flex justify-center items-center">
+                        <div className="text-center">
+                            <p className="text-5xl font-semibold leading-10 text-white">200+</p>
+                            <p className="text-base font-medium leading-none text-white mt-4">Revenue generated per month</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
           </section>
 
           <section className="text-gray-600 body-font container mx-auto">
