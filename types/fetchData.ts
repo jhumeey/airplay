@@ -1,3 +1,4 @@
+
 export type Resource = {
   id: number;
   createdAt: string;
@@ -7,4 +8,8 @@ export type Resource = {
   tag: string;
   imageUrl: string;
   description: string
+}
+
+export interface ResourcesProps {
+  resources: Resource[]
 }
