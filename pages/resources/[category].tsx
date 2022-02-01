@@ -1,12 +1,13 @@
-import * as React from "react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
-import Loader from "../../public/images/three-dot-loader.svg";
+import * as React from "react";
+
+import ResourceCard from "../../components/cards/ResourceCard";
 import Layout from "../../components/layout";
+import prisma from "../../lib/prisma";
+import Loader from "../../public/images/three-dot-loader.svg";
 import { ResourcesProps } from "../../types/fetchData";
 import { sidebarLinks } from "../../utils/nav-menu";
-import ResourceCard from "../../components/cards/ResourceCard";
-import prisma from "../../lib/prisma";
 
 export default function DashboardWithFilter({ resources }: ResourcesProps) {
   const [isLoading, setIsloading] = React.useState(false);
@@ -53,9 +54,10 @@ export async function getStaticPaths() {
 
 // This function gets called at build time
 export const getStaticProps: GetStaticProps = async (context) => {
+  const filter = context?.params?.category;
   const resources = await prisma.resources.findMany({
     where: {
-      tag: context.params && context.params.category,
+      tag: filter?.toString()
     },
   });
   return {
