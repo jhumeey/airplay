@@ -1,7 +1,8 @@
-import * as React from "react";
-import { ItemProps } from "./types";
-import { fetchTagColor } from "../../utils/generateColor";
 import Link from "next/link";
+import * as React from "react";
+
+import { fetchTagColor } from "../../utils/generateColor";
+import { ItemProps } from "./types";
 
 export default function ResourceCard({ item }: ItemProps) {
   let color = fetchTagColor(item.tag);
