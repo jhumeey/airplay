@@ -44,19 +44,19 @@ const LandingPage = () => {
                 Browse Resources
               </a>
             </Link>
-            <div className="absolute top-5 right-5 w-10 h-10">
+            <div className="absolute top-5 right-5 w-10 h-10 ">
               <Image src={cylinder}  alt="cylinder-icon"/>
             </div>
-            <div className="absolute top-5 left-1 w-10 h-10">
+            <div className="absolute top-12 md:top-5 left-1 w-10 h-10 animate-pulse">
               <Image src={code} />
             </div>
-            <div className="absolute bottom-8 left-32 md:bottom-5 md:left-40 w-10 h-10">
+            <div className="absolute top-12 md:bottom-8 left-48 md:left-32 md:bottom-5 md:left-40 w-10 h-10 ">
               <Image src={youtube} />
             </div>
-            <div className="absolute bottom-5 right-40 w-10 h-10">
+            <div className="absolute bottom-40 md:bottom-5 animate-pulse right-0 md:right-40 w-10 h-10">
               <Image src={jobIcon} />
             </div>
-            <div className="absolute top-80 md:top-auto right-auto w-10 h-10">
+            <div className="absolute top-100 md:top-80 md:top-auto left-32 md:right-auto w-10 h-10 animate-pulse">
               <Image src={magnifier} />
             </div>
             <div className="absolute bottom-1 right-80 w-10 h-10">
