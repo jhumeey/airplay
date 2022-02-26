@@ -23,7 +23,7 @@ export default function DashboardWithFilter({ resources }: ResourcesProps) {
           <h2 className=" text-4xl md:text-6xl font-medium">There is no data for this category. </h2>
           <p className="text--3xl md:text-4xl py-4">
             Please, check the all resources page.{" "}
-            <Link href="/all">
+            <Link href="/resources">
               <a className="underline text-green-400">Home</a>
             </Link>
           </p>

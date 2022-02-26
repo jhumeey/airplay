@@ -17,7 +17,7 @@ export default function Dashboard({ resources }: ResourcesProps) {
           <h2>There is no data for this category. </h2>
           <p>
             Please, check the all respirces page.{" "}
-            <Link href="/all">
+            <Link href="/resources">
               <a>Home</a>
             </Link>
           </p>
