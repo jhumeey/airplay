@@ -1,11 +1,11 @@
-import Link from "next/link";
 import * as React from "react";
 
-import { fetchTagColor, colors } from "../../utils/generateColor";
+import { colors } from "../../utils/generateColor";
 import { ItemProps } from "./types";
 
 export default function ResourceCard({ item }: ItemProps) {
-  const color = colors[item.tag.toLowerCase()];
+  const tags = item.tag.toLowerCase();
+  const color = colors[tags];
   return (
     <li className="card p-4  cursor-pointer text-gray-brand-02 flex flex-col border border-gray-brand-03 rounded-lg">
       <div className="flex flex-col flex-1">

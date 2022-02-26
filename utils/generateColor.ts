@@ -35,7 +35,7 @@ export const fetchTagColor = (tag: string) => {
 };
 
 
-export const colors = {
+export const colors: { [key: string]: any } = {
   podcasts: "sky-600",
   fonts: "indigo-500",
   extensions: "blue-600",
