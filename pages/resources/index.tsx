@@ -1,23 +1,35 @@
-import * as React from "react";
-import Layout from "../../components/layout";
+import { GetStaticProps } from "next";
 import Image from "next/image";
-import prisma from "../../lib/prisma";
+import Link from "next/link";
+import * as React from "react";
+import { serialize } from "superjson";
+
 import ResourceCard from "../../components/cards/ResourceCard";
 import FilterBox from "../../components/filter/FilterBox";
-import { ResourcesProps } from "../../types/fetchData";
+import Layout from "../../components/layout";
+import prisma from "../../lib/prisma";
+import appScreenshot from "../../public/images/app-screenshot.png"
 import Loader from "../../public/images/three-dot-loader.svg";
-import { GetStaticProps } from "next";
+import { ResourcesProps } from "../../types/fetchData";
+import { getResources } from "../../utils/airtable";
+import { serializeFunc } from "../../utils/serialize";
 
 export default function Dashboard({ resources }: ResourcesProps) {
   return (
     <div>
-      {!resources ? (
-        <div className="text-center py-14">
-          <Image src={Loader} />
+      {resources.length < 1 ? (
+        <div className="mx-auto w-60 h-60">
+          <h2>There is no data for this category. </h2>
+          <p>
+            Please, check the all respirces page.{" "}
+            <Link href="/all">
+              <a>Home</a>
+            </Link>
+          </p>
         </div>
       ) : (
         <div className="flex flex-col">
-          <FilterBox />
+          {/* <FilterBox /> */}
           <ul
             role="list"
             className={
@@ -25,7 +37,7 @@ export default function Dashboard({ resources }: ResourcesProps) {
             }
           >
             {resources.map((item) => (
-              <ResourceCard key={item.name} item={item} />
+              <ResourceCard key={item.id} item={item.fields} />
             ))}
           </ul>
         </div>
@@ -35,23 +47,15 @@ export default function Dashboard({ resources }: ResourcesProps) {
 }
 
 Dashboard.getLayout = function getLayout(page: React.ReactElement) {
-  return <Layout>{page}</Layout>;
+  return <Layout pageTitle="web development resources" description="A collection of over 500 web development resources" siteName="web scout" previewImage={appScreenshot}>{page}</Layout>;
 };
 
-export const getStaticProps: GetStaticProps =   async ()  => {
-  const resources = await prisma.resources.findMany({
-    select: {
-      id: true,
-      name: true,
-      link: true,
-      tag: true,
-      imageUrl: true,
-      description: true,
-    },
-  });
+export const getStaticProps: GetStaticProps = async () => {
+  const resources = await getResources();
+
   return {
     props: {
       resources: resources,
     },
   };
-}
+};

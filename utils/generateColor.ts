@@ -33,3 +33,17 @@ export const fetchTagColor = (tag: string) => {
   }
   return color;
 };
+
+
+export const colors = {
+  podcasts: "sky-600",
+  fonts: "indigo-500",
+  extensions: "blue-600",
+  youtube:"rose-500",
+  css: "yellow-300",
+  icons: "pink-700",
+  illustrations: "fuschia-700",
+  freelancing: "orange-700",
+  learning: "zinc-700"
+
+}

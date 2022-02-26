@@ -2,6 +2,7 @@ import { Field, Form, Formik, FormikHelpers } from "formik";
 import * as React from "react";
 import { toast } from "react-toastify";
 
+import { submitResources } from "../../utils/airtable";
 import { supabase } from "../../utils/supabase";
 import { ResourceSchema } from "../../utils/yupValidation";
 import { ToggleModalProps } from "../navbar/types";
@@ -11,13 +12,22 @@ export default function ResourceModal(props: ToggleModalProps) {
   const initialValues: FormValues = { name: "", link: "", tag: "" };
 
   const submitResource = async (values: FormValues) => {
-    const { error } = await supabase
-      .from("suggested_resources")
-      .insert([values]);
-    if (error) {
+    console.log('rest');
+    try {
+      await submitResources(values);
+      
+      toast.success("yay 💃, resource has been successfully submitted");
+    } catch {
       toast.error("oops! an error occured, kindly try again");
+      
     }
-    toast.success("yay 💃, resource has been successfully submitted");
+   
+    // const { error } = await supabase
+    //   .from("suggested_resources")
+    //   .insert([values]);
+    // if (error) {
+    //   
+    //
   };
   return (
     <>

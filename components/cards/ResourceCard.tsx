@@ -1,11 +1,11 @@
 import Link from "next/link";
 import * as React from "react";
 
-import { fetchTagColor } from "../../utils/generateColor";
+import { fetchTagColor, colors } from "../../utils/generateColor";
 import { ItemProps } from "./types";
 
 export default function ResourceCard({ item }: ItemProps) {
-  let color = fetchTagColor(item.tag);
+  const color = colors[item.tag.toLowerCase()];
   return (
     <li className="card p-4  cursor-pointer text-gray-brand-02 flex flex-col border border-gray-brand-03 rounded-lg">
       <div className="flex flex-col flex-1">
@@ -43,7 +43,7 @@ export default function ResourceCard({ item }: ItemProps) {
         <div className="flex items-center">
           {/* Empty div ==> Decorative purpose */}
           <div
-            className={`h-3 w-3  border-2 mr-1 border-${color} rounded-full`}
+            className={"h-3 w-3 border-2 mr-1 rounded-full " + (`border-${colors[item.tag.toLowerCase()]}`)}
           />
           <div className={`text-base flex items-center font-medium text-gray-brand-02 resource-card-tag ${item && item.tag === "css" ? 'uppercase' : 'capitalize'}`}>
             {" "}

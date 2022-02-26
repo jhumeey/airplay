@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import type { AppProps } from "next/app";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -25,10 +26,6 @@ export default function MyApp({ Component, pageProps, fallback }: AppPropsWithLa
         fetcher: (resource, init) => fetch(resource, init).then((res) => res.json()),
       }}
     >
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://api.fontshare.com/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet"/>
-      </Head>
       <Component {...pageProps} />
       <ToastContainer
         position="top-right"

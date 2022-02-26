@@ -24,7 +24,7 @@
     "**/*.ts",
     "**/*.tsx",
     "tailwind.config.js"
-  ],
+, "pages/api/resources.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -7,3 +7,38 @@ html {
 }
 
 
+.border-yellow-300 {
+  border-color: #974343;
+}
+
+.border-sky-600 {
+  border-color: #0284C7;
+}
+
+.border-blue-600 {
+  border-color: #2563EB;
+}
+
+.border-indigo-500 {
+  border-color: #6366F1;
+}
+
+.border-rose-500 {
+  border-color: #F43F5E;
+}
+
+.border-pink-700 {
+  border-color: #BE185D;
+}
+
+.border-fuschia-700 {
+  border-color: #A21CAF;
+}
+
+.border-orange-700 {
+  border-color: #C2410c;
+}
+
+.border-zinc-700 {
+  border-color: #3F3F46;
+}

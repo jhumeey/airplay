@@ -4,13 +4,12 @@ import Link from "next/link";
 import React from "react";
 
 import Navbar from "../components/navbar/LandingNavbar";
-import css from "../public/images/css.svg";
+import code from "../public/images/code-icon.png";
+import css from "../public/images/css3.png";
 import cylinder from "../public/images/cylinder.svg";
-import ellipse from "../public/images/Ellipse.svg";
-import job from "../public/images/job.svg";
-import podcast from "../public/images/podcast.svg";
-import settings from "../public/images/settings.svg";
-import web from "../public/images/web.svg";
+import jobIcon from "../public/images/job-icon.png";
+import magnifier from "../public/images/magnifier.png";
+import settings from "../public/images/settings.png";
 import youtube from "../public/images/youtube.svg";
 
 const LandingPage = () => {
@@ -19,13 +18,7 @@ const LandingPage = () => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <meta property="og:title" content="web-resources" key="ogtitle" />
-        <meta
-          property="og:description"
-          content="free resources for web development"
-          key="ogdesc"
-        />
-        <title>Web Dev</title>
+        <title>Web Scout</title>
       </Head>
       <main className="flex flex-col w-full bg-black-brand-01 overflow-hidden">
         <div className="container px-4 mx-auto my-4">
@@ -37,30 +30,30 @@ const LandingPage = () => {
               Unlock Over 500+ FREE Web Resources
             </h1>
             <p className="text-xl text-gray-brand-02 py-4">
-              Discover amazing web development resources packed in one place.
+              Discover amazing web development resources all in one place.
             </p>
             <Link href="/resources">
-              <a className="font-medium text-lg transition duration-500 ease-in-out bg-green-brand-01 rounded text-black-brand-01 px-7 py-3 my-4 inline-block hover:bg-green-600 transform hover:-translate-y-1 hover:scale-110 ">
+              <a className="font-medium text-lg transition duration-500 ease-in-out bg-green-brand-01 rounded text-black-brand-01 px-7 py-3 my-4 inline-block hover:bg-green-600 transform hover:-translate-y-1 hover:scale-80">
                 Browse Resources
               </a>
             </Link>
             <div className="absolute top-5 right-5 w-10 h-10">
-              <Image src={cylinder} />
+              <Image src={cylinder}  alt="cylinder-icon"/>
             </div>
             <div className="absolute top-5 left-1 w-10 h-10">
-              <Image src={job} />
+              <Image src={code} />
             </div>
             <div className="absolute bottom-8 left-32 md:bottom-5 md:left-40 w-10 h-10">
               <Image src={youtube} />
             </div>
             <div className="absolute bottom-5 right-40 w-10 h-10">
-              <Image src={settings} />
+              <Image src={jobIcon} />
             </div>
-            <div className="absolute  top-80 md:top-auto right-auto w-10 h-10">
-              <Image src={podcast} />
+            <div className="absolute top-80 md:top-auto right-auto w-10 h-10">
+              <Image src={magnifier} />
             </div>
             <div className="absolute bottom-1 right-80 w-10 h-10">
-              <Image src={web} />
+              <Image src={settings} />
             </div>
 
             <div className="absolute md:top-1 md:right-96 w-10 h-10">
@@ -71,13 +64,10 @@ const LandingPage = () => {
           <section className="text-gray-600 body-font">
             <div className="container px-2 md:px-5 py-24 mx-auto">
               <div className="flex flex-wrap w-full mb-4 flex-col items-center text-center">
-                <h1 className="text-3xl md:text-5xl font-medium title-font py-4 text-green-400">
-                  What you get
+                <h1 className="text-3xl md:text-4xl font-medium title-font py-4 text-green-400">
+                  Features of WebScout
                 </h1>
-                <p className="lg:w-1/2 w-full text-2xl leading-relaxed text-gray-500">
-                  Fueler web resources is packed with amazing and robust
-                  features
-                </p>
+                
               </div>
               <section className="relative py-20 2xl:py-40 overflow-hidden">
                 <div className="relative container px-4 mx-auto">
@@ -122,12 +112,11 @@ const LandingPage = () => {
                               </g>
                             </svg>
                           </span>
-                          <h3 className="mt-12 mb-6 text-3xl font-bold font-heading text-white">
+                          <h3 className="mt-12 mb-6 text-3xl font-normal text-white">
                             Frequently updated resources
                           </h3>
-                          <p className="text-lg text-gray-200">
-                            The brown me quam, sagittis porttitor lorem vel,
-                            commodo fringilla nisl.
+                          <p className="text-lg text-gray-400">
+                            I update web scout weekly with fresh new resources.
                           </p>
                         </div>
                       </div>
@@ -154,12 +143,11 @@ const LandingPage = () => {
                               </g>
                             </svg>
                           </span>
-                          <h3 className="mt-12 mb-6 text-3xl font-bold font-heading text-white">
+                          <h3 className="mt-12 mb-6 text-3xl font-normal text-white">
                             Categorized Resources
                           </h3>
-                          <p className="text-lg text-gray-200">
-                            It’s over, maecenas tincidunt malesuada dolor sit
-                            amet malesuada.
+                          <p className="text-lg text-gray-400">
+                            Resources are all labeled with tags.
                           </p>
                         </div>
                       </div>
@@ -194,174 +182,19 @@ const LandingPage = () => {
                               </g>
                             </svg>
                           </span>
-                          <h3 className="mt-12 mb-6 text-3xl font-bold font-heading text-white">
-                            Documents
+                          <h3 className="mt-12 mb-6 text-3xl font-normal text-white">
+                            Open Source
                           </h3>
-                          <p className="text-lg text-gray-200">
-                            The brown me quam, sagittis porttitor lorem vel,
-                            commodo fringilla nisl.
+                          <p className="text-lg text-gray-400">
+                            Web Scout is an open source project, you are welcome to contribute.
                           </p>
                         </div>
-                      </div>
-                      <div className="w-full p-6">
-                        <div className="p-8 border border-gray-brand-04 rounded-lg h-[400px]">
-                          <span className="flex mb-14 justify-center items-center w-20 h-20 bg-pink-500 rounded-lg">
-                            <svg
-                              className="w-8 h-8"
-                              width="35"
-                              height="35"
-                              viewBox="0 0 35 35"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M24.0618 13.1252C24.0618 12.8938 23.952 12.6761 23.766 12.5386C23.5797 12.4012 23.3394 12.3602 23.1183 12.4282L14.3682 15.1206C14.0623 15.2147 13.8535 15.4974 13.8535 15.8175V21.5363C13.4245 21.288 12.9264 21.146 12.3952 21.146C10.7844 21.146 9.47852 22.4518 9.47852 24.0627C9.47852 25.6735 10.7844 26.9793 12.3952 26.9793C14.0044 26.9793 15.3092 25.676 15.3118 24.0673V24.0627V16.356L22.6035 14.1124V20.0779C22.1745 19.8297 21.6765 19.6877 21.1452 19.6877C19.5343 19.6877 18.2285 20.9935 18.2285 22.6043C18.2285 24.2152 19.5343 25.521 21.1452 25.521C22.7545 25.521 24.0592 24.2177 24.0618 22.609V22.6043V13.1252ZM22.6035 22.6043C22.6035 21.7989 21.9506 21.146 21.1452 21.146C20.3397 21.146 19.6868 21.7989 19.6868 22.6043C19.6868 23.4098 20.3397 24.0627 21.1452 24.0627C21.9506 24.0627 22.6035 23.4098 22.6035 22.6043ZM12.3952 22.6043C11.5898 22.6043 10.9368 23.2572 10.9368 24.0627C10.9368 24.8681 11.5898 25.521 12.3952 25.521C13.2006 25.521 13.8535 24.8681 13.8535 24.0627C13.8535 23.2572 13.2006 22.6043 12.3952 22.6043Z"
-                                fill="white"
-                              ></path>
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M10.208 3.646C8.19447 3.646 6.56217 5.27829 6.56217 7.29183V8.09393C4.89804 8.43172 3.64551 9.903 3.64551 11.6668V27.7085C3.64551 29.722 5.27781 31.3543 7.29134 31.3543H27.708C29.7215 31.3543 31.3538 29.722 31.3538 27.7085V11.6668C31.3538 9.903 30.1013 8.43172 28.4372 8.09393V7.29183C28.4372 5.27829 26.8049 3.646 24.7913 3.646H10.208ZM26.9788 8.021V7.29183C26.9788 6.0837 25.9994 5.10433 24.7913 5.10433H10.208C8.99988 5.10433 8.02051 6.0837 8.02051 7.29183V8.021H26.9788ZM7.29134 9.47933C6.08321 9.47933 5.10384 10.4587 5.10384 11.6668V27.7085C5.10384 28.9166 6.08321 29.896 7.29134 29.896H27.708C28.9161 29.896 29.8955 28.9166 29.8955 27.7085V11.6668C29.8955 10.4587 28.9161 9.47933 27.708 9.47933H7.29134Z"
-                                fill="white"
-                              ></path>
-                            </svg>
-                          </span>
-                          <h3 className="mt-12 mb-6 text-3xl font-bold font-heading text-white">
-                            Weekly updates
-                          </h3>
-                          <p className="text-lg text-gray-200">
-                            Again and again vehicula libero at nibh volutpat
-                            lacinia non in.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="w-full p-6">
-                        <div className="p-8 border border-gray-brand-04 rounded-lg h-[400px]">
-                          <span className="flex mb-14 justify-center items-center w-20 h-20 bg-yellow-500 rounded-lg">
-                            <svg
-                              className="w-8 h-8"
-                              width="35"
-                              height="35"
-                              viewBox="0 0 35 35"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M28.6406 14.1483H28.6691V10.4266C28.6691 4.48283 23.8661 0 17.4994 0C11.1326 0 6.32965 4.48283 6.32965 10.4266V14.1483H6.36011C4.93069 16.2796 4.0957 18.8415 4.0957 21.5948C4.0957 28.9869 10.1087 35 17.4994 35C24.8908 35 30.9046 28.987 30.9053 21.5948C30.9053 18.8415 30.0702 16.2796 28.6406 14.1483ZM7.81895 10.4266C7.81895 5.24826 11.8892 1.4893 17.4994 1.4893C23.1096 1.4893 27.1798 5.24826 27.1798 10.4266V12.3318C24.7379 9.78162 21.3013 8.19113 17.5001 8.19113C13.6979 8.19113 10.2608 9.78244 7.81895 12.3336V10.4266ZM17.5001 33.5107C10.93 33.5107 5.585 28.1649 5.585 21.5948C5.585 15.0256 10.9293 9.68043 17.4994 9.68043C24.071 9.68043 29.4153 15.0256 29.416 21.5948C29.416 28.1649 24.0717 33.5107 17.5001 33.5107Z"
-                                fill="white"
-                              ></path>
-                              <path
-                                d="M17.4996 14.8931C15.4466 14.8931 13.7764 16.5633 13.7764 18.6163C13.7764 19.7802 14.3378 20.8808 15.2657 21.5793V24.5735C15.2657 25.8052 16.268 26.8074 17.4996 26.8074C18.7305 26.8074 19.7336 25.8052 19.7336 24.5735V21.5793C20.6613 20.88 21.2229 19.7802 21.2229 18.6163C21.2229 16.5633 19.5518 14.8931 17.4996 14.8931ZM18.6136 20.5383C18.3842 20.6709 18.2443 20.9173 18.2443 21.1816V24.5735C18.2443 24.9846 17.9099 25.3181 17.4996 25.3181C17.0894 25.3181 16.755 24.9846 16.755 24.5735V21.1816C16.755 20.9173 16.6142 20.6723 16.3849 20.5383C15.6841 20.1302 15.2657 19.4116 15.2657 18.6163C15.2657 17.3847 16.268 16.3824 17.4996 16.3824C18.7305 16.3824 19.7336 17.3847 19.7336 18.6163C19.7336 19.4116 19.315 20.1302 18.6136 20.5383Z"
-                                fill="white"
-                              ></path>
-                            </svg>
-                          </span>
-                          <h3 className="mt-12 mb-6 text-3xl font-bold font-heading text-white">
-                            Internal security
-                          </h3>
-                          <p className="text-lg text-gray-200">
-                            Again and again vehicula libero at nibh volutpat
-                            lacinia non in.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="w-full p-6">
-                        <div className="p-8 border border-gray-brand-04 rounded-lg h-[400px]">
-                          <span className="flex mb-14 justify-center items-center w-20 h-20 bg-orange-500 rounded-lg">
-                            <svg
-                              className="w-8 h-8"
-                              width="35"
-                              height="35"
-                              viewBox="0 0 35 35"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <g clipPath="url(#clip0)">
-                                <path
-                                  d="M19.6875 21.8752C19.5009 21.8752 19.3142 21.8038 19.1713 21.6623L10.4213 12.9123C10.1369 12.6279 10.1369 12.1656 10.4213 11.8813C10.7057 11.5969 11.168 11.5969 11.4523 11.8813L20.2023 20.6313C20.4867 20.9156 20.4867 21.3779 20.2023 21.6623C20.0609 21.8038 19.8742 21.8752 19.6875 21.8752Z"
-                                  fill="white"
-                                ></path>
-                                <path
-                                  d="M0.728731 32.0832C0.537689 32.0832 0.351023 32.0074 0.212481 31.8703C0.0403977 31.6982 -0.0339773 31.4503 0.0126894 31.2111L2.92936 16.6278C3.00519 16.2486 3.35811 15.989 3.74748 16.0488C6.71373 16.4732 9.75727 15.4597 11.8791 13.3393C12.1635 13.0549 12.6258 13.0549 12.9102 13.3393C13.1946 13.6236 13.1946 14.0859 12.9102 14.3703C10.6294 16.6511 7.41665 17.8207 4.22873 17.5684L1.65769 30.4251L14.5144 27.8541C14.2635 24.6559 15.4316 21.4534 17.7125 19.1726C17.9969 18.8882 18.4591 18.8882 18.7435 19.1726C19.0279 19.457 19.0279 19.9193 18.7435 20.2036C16.6216 22.3255 15.6096 25.3647 16.0339 28.3353C16.0894 28.7188 15.8341 29.0776 15.455 29.1534L0.871648 32.0701C0.823523 32.0788 0.776856 32.0832 0.728731 32.0832Z"
-                                  fill="white"
-                                ></path>
-                                <path
-                                  d="M0.729531 32.0834C0.542865 32.0834 0.356198 32.0119 0.213281 31.8705C-0.0710938 31.5861 -0.0710938 31.1238 0.213281 30.8394L6.4112 24.6415C6.69557 24.3571 7.15787 24.3571 7.44224 24.6415C7.72661 24.9259 7.72661 25.3882 7.44224 25.6725L1.24432 31.8705C1.10286 32.0119 0.916198 32.0834 0.729531 32.0834Z"
-                                  fill="white"
-                                ></path>
-                                <path
-                                  d="M8.74967 26.2498C7.14113 26.2498 5.83301 24.9417 5.83301 23.3332C5.83301 21.7246 7.14113 20.4165 8.74967 20.4165C10.3582 20.4165 11.6663 21.7246 11.6663 23.3332C11.6663 24.9417 10.3582 26.2498 8.74967 26.2498ZM8.74967 21.8748C7.94613 21.8748 7.29134 22.5296 7.29134 23.3332C7.29134 24.1367 7.94613 24.7915 8.74967 24.7915C9.55322 24.7915 10.208 24.1367 10.208 23.3332C10.208 22.5296 9.55322 21.8748 8.74967 21.8748Z"
-                                  fill="white"
-                                ></path>
-                                <path
-                                  d="M18.2295 20.4167C18.0181 20.4167 17.8081 20.3248 17.6637 20.1484C17.4085 19.8378 17.4552 19.3784 17.7672 19.1217L33.8089 5.99671C34.1195 5.7415 34.5789 5.78817 34.8356 6.10025C35.0908 6.41088 35.0441 6.87025 34.732 7.12692L18.6904 20.2519C18.5562 20.3628 18.3929 20.4167 18.2295 20.4167Z"
-                                  fill="white"
-                                ></path>
-                                <path
-                                  d="M12.3962 14.5833C12.2401 14.5833 12.0826 14.5337 11.9485 14.4302C11.6306 14.1822 11.5737 13.7243 11.8201 13.4064L22.0285 0.281413C22.2749 -0.0335872 22.7343 -0.0948372 23.0522 0.154538C23.3701 0.400996 23.427 0.858913 23.1791 1.17829L12.9708 14.3033C12.8279 14.487 12.612 14.5833 12.3962 14.5833Z"
-                                  fill="white"
-                                ></path>
-                                <path
-                                  d="M31.8412 34.5831H7.72917C7.32667 34.5831 7 34.2564 7 33.8539C7 33.4514 7.32667 33.1247 7.72917 33.1247H31.8412C32.6171 33.1247 33.25 32.4918 33.25 31.716C33.25 31.121 32.8737 30.5887 32.3137 30.3874L24.9258 27.7493C23.7985 27.3468 23.0417 26.2706 23.0417 25.0747C23.0417 23.9066 23.7417 22.8712 24.8267 22.4381L30.7912 20.0522C31.1602 19.9035 31.5904 20.0828 31.7392 20.4591C31.8894 20.8324 31.7071 21.2568 31.3323 21.407L25.3677 23.7928C24.8412 24.0028 24.5 24.506 24.5 25.0747C24.5 25.6566 24.869 26.1801 25.4173 26.377L32.8052 29.0151C33.9442 29.4206 34.7083 30.507 34.7083 31.716C34.7083 33.2968 33.4221 34.5831 31.8412 34.5831Z"
-                                  fill="white"
-                                ></path>
-                              </g>
-                            </svg>
-                          </span>
-                          <h3 className="mt-12 mb-6 text-3xl font-bold font-heading text-white">
-                            Creative Tools
-                          </h3>
-                          <p className="text-lg text-gray-200">
-                            Again and again vehicula libero at nibh volutpat
-                            lacinia non in.
-                          </p>
-                        </div>
-                      </div>
+                      </div>          
                     </div>
                   </div>
                 </div>
               </section>
             </div>
-          </section>
-          <section className="text-gray-brand-01 body-font">
-           
-            <div className="py-20 px-6 2xl:container 2xl:mx-auto">
-            <div className="flex flex-wrap justify-between">
-                <div className="lg:w-1/3 flex flex-col lg:items-center lg:justify-center">
-                    <h1 className="md:text-5xl text-2xl lg:text-4xl xl:text-5xl font-semibold leading-tight text-gray-800">Statistics is the Grammer of science</h1>
-                    <p className="text-base leading-normal text-gray-600 mt-4">It's important to understand what all the costs associated with a product or service are, because you need to know that you're making a reasonable margin</p>
-                </div>
-                <div className="xl:w-1/2 lg:w-7/12 w-full grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 sm:justify-center sm:items-center  lg:mt-0 mt-8">
-                    <div className="bg-indigo-700 shadow rounded xl:w-72  w-full h-72 flex justify-center items-center">
-                        <div className="text-center">
-                            <p className="text-5xl font-semibold leading-10 text-white">50+</p>
-                            <p className="text-base font-medium leading-none text-white mt-4">loss per month</p>
-                        </div>
-                    </div>
-                    <div className="bg-indigo-700 shadow rounded xl:w-72  w-full h-72 flex justify-center items-center">
-                        <div className="text-center">
-                            <p className="text-5xl font-semibold leading-10 text-white">200+</p>
-                            <p className="text-base font-medium leading-none text-white mt-4">Revenue generated per month</p>
-                        </div>
-                    </div>
-
-                    <div className="bg-indigo-700 shadow rounded xl:w-72  w-full h-72 flex justify-center items-center">
-                        <div className="text-center">
-                            <p className="text-5xl font-semibold leading-10 text-white">150+</p>
-                            <p className="text-base font-medium leading-none text-white mt-4">Profit Generated</p>
-                        </div>
-                    </div>
-                    <div className="bg-indigo-700 shadow rounded xl:w-72  w-full h-72 flex justify-center items-center">
-                        <div className="text-center">
-                            <p className="text-5xl font-semibold leading-10 text-white">200+</p>
-                            <p className="text-base font-medium leading-none text-white mt-4">Revenue generated per month</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
           </section>
 
           <section className="text-gray-600 body-font container mx-auto">
@@ -370,71 +203,35 @@ const LandingPage = () => {
                 <h1 className="text-3xl md:text-4xl mb-3 font-medium text-white py-4">
                   Got ideas on how to improve this project ?
                 </h1>
-                <p className="mb-8 leading-relaxed text-xl">
-                  Send us a mail at fueler.com
+                <p className="mb-8 leading-relaxed text-xl text-gray-400">
+                  Send me a mail at yakubuaminat94@gmail.com
                 </p>
               </div>
             </div>
           </section>
 
-          <footer className="grid gap-4 grid-cols-2 md:grid-cols-3">
-            <ul className="space-y-1 text-gray-brand-02">
-              <li className="pb-4 text-green-brand-01">Social networks</li>
-              <li>
-                <a href="https://twitter.com/" className="hover:underline">
+          <footer className="flex items-center justify-center">
+            <ul className="space-y-1 text-gray-brand-02 flex items-center">
+              <li className="mr-3">
+                <a href="https://twitter.com/yakubu_jumoke/" className="hover:underline">
                   Twitter
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:underline">
+              <li className="mr-3">
+                <a href="https://www.linkedin.com/in/aminat" className="hover:underline">
                   Linkedin
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:underline">
+              <li className="mr-3">
+                <a href="https://www.instagram.com/jhumeey/" className="hover:underline">
                   Instagram
                 </a>
               </li>
             </ul>
-            <ul className="space-y-1 text-gray-brand-02">
-              <li className="pb-4 text-green-brand-01">Products</li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Dope UI
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Fueler
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Excuse Me
-                </a>
-              </li>
-            </ul>
-            <ul className="space-y-1 text-gray-brand-02">
-              <li className="pb-4 text-green-brand-01">Credits</li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Design
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Resources
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Images
-                </a>
-              </li>
-            </ul>
+         
           </footer>
           <div className="text-center">
-            <p className="text-lg font-medium py-6">Developed by Minna ❤️ </p>
+            <p className="text-lg font-medium py-6 text-gray-400">Developed by Minna ❤️ </p>
           </div>
         </div>
       </main>

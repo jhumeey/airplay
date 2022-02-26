@@ -1,7 +1,8 @@
-import * as React from "react";
 import Link from "next/link";
-import { sidebarLinks } from "../../utils/nav-menu";
 import { useRouter } from "next/router";
+import * as React from "react";
+
+import { sidebarLinks } from "../../utils/nav-menu";
 import { ToggleProps } from "./types";
 
 const Sidebar = (props: ToggleProps) => {
@@ -14,8 +15,8 @@ const Sidebar = (props: ToggleProps) => {
       } h-screen px-4 py-4 bg-black-brand-09 shadow-inner w-full lg:w-60 xl:w-64 2xl:w-80 lg:px-6 xl:px-8 lg:py-6 lg:flex overflow-scroll border-r border-gray-brand-03`}
     >
       <div className="flex-1 py-4">
-        <a href="/" className="hidden md:block">
-          <span className="sr-only">Fueler Resources</span>
+        <a href="/" className="hidden lg:block">
+          <span className="sr-only">Web Scout</span>
           <svg
             width="100"
             height="20"
