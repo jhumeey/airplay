@@ -1,18 +1,13 @@
 import { GetStaticProps } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
-import { serialize } from "superjson";
 
 import ResourceCard from "../../components/cards/ResourceCard";
 import FilterBox from "../../components/filter/FilterBox";
 import Layout from "../../components/layout";
-import prisma from "../../lib/prisma";
 import appScreenshot from "../../public/images/app-screenshot.png"
-import Loader from "../../public/images/three-dot-loader.svg";
 import { ResourcesProps } from "../../types/fetchData";
 import { getResources } from "../../utils/airtable";
-import { serializeFunc } from "../../utils/serialize";
 
 export default function Dashboard({ resources }: ResourcesProps) {
   return (

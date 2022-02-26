@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 import Navbar from "../components/navbar/LandingNavbar";
+import appScreenshot from "../public/images/app-screenshot.png"
 import code from "../public/images/code-icon.png";
 import css from "../public/images/css3.png";
 import cylinder from "../public/images/cylinder.svg";
@@ -18,7 +19,13 @@ const LandingPage = () => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <title>Web Scout</title>
+        <title>Web Scout- Home Page</title>
+        <meta name="description" content="web scout is a web application that collect unique web development resources in one place" />
+        <meta property="og:title" content="web scout home page" key="ogtitle" />
+       <meta property="og:description" content="web scout is a web application that collect unique web development resources in one place" key="ogdesc" />
+       <meta property="og:image" content="../public/images/app-screenshot.png" key="ogimage" />
+       <meta property="og:site_name" content="web scout" key="ogsitename" />
+
       </Head>
       <main className="flex flex-col w-full bg-black-brand-01 overflow-hidden">
         <div className="container px-4 mx-auto my-4">
