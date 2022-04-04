@@ -82,13 +82,13 @@ const LandingPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 -m-6">
                       <div className="w-full p-6">
                       <div className="p-8 border border-gray-brand-04 rounded-lg h-[400px]">
-                          <span className="flex mb-14 justify-center items-center w-20 h-20 bg-blue-500 rounded-lg">
+                          <span className="flex mb-14 justify-center items-center w-20 h-20 rounded-lg">
                             <svg
                               className="w-8 h-8"
                               width="35"
                               height="35"
                               viewBox="0 0 35 35"
-                              fill="none"
+                              fill="3b82f6"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <g clipPath="url(#clip0)">
@@ -123,13 +123,13 @@ const LandingPage = () => {
                             Frequently updated resources
                           </h3>
                           <p className="text-lg text-gray-400">
-                            I update web scout weekly with fresh new resources.
+                            Webscout is updated bi-weekly with fresh new resources.
                           </p>
                         </div>
                       </div>
                       <div className="w-full p-6">
                         <div className="p-8  border border-gray-brand-04 rounded-lg h-[400px]">
-                          <span className="flex mb-14 justify-center items-center w-20 h-20 bg-purple-500 rounded-lg">
+                          <span className="flex mb-14 justify-center items-center w-20 h-20 rounded-lg">
                             <svg
                               className="w-8 h-8"
                               width="35"
@@ -154,13 +154,13 @@ const LandingPage = () => {
                             Categorized Resources
                           </h3>
                           <p className="text-lg text-gray-400">
-                            Resources are all labeled with tags.
+                            Resources are all labeled with tags to help organize and easily identify resources
                           </p>
                         </div>
                       </div>
                       <div className="w-full p-6">
                         <div className="p-8 border border-gray-brand-04 rounded-lg h-[400px]">
-                          <span className="flex mb-14 justify-center items-center w-20 h-20 bg-green-500 rounded-lg">
+                          <span className="flex mb-14 justify-center items-center w-20 h-20 rounded-lg">
                             <svg
                               className="w-8 h-8"
                               width="36"
