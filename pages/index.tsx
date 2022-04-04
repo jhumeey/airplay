@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 import Navbar from "../components/navbar/LandingNavbar";
-import appScreenshot from "../public/images/app-screenshot.png"
 import code from "../public/images/code-icon.png";
 import css from "../public/images/css3.png";
 import cylinder from "../public/images/cylinder.svg";
