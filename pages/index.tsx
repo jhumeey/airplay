@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import * as React from "react";
 
 import Navbar from "../components/navbar/LandingNavbar";
 import code from "../public/images/code-icon.png";
