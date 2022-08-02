@@ -27,7 +27,6 @@ model User {
   name  String?
 }
 
-
 enum Role {
   ADMIN
   USER
