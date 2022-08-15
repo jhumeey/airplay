@@ -42,3 +42,13 @@ html {
 .border-zinc-700 {
   border-color: #3F3F46;
 }
+
+.a-p-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#__next {
+  background-color: #000308;
+}
