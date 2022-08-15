@@ -3,7 +3,7 @@ import { supabase, } from '../utils/supabase';
 import { AuthSession } from '@supabase/supabase-js';
 import {useRouter} from 'next/router';
 import Auth from './auth';
-import Dashboard from './resources';
+import Dashboard from './playlists';
 
 export default function SuggestedResources() {
   const router = useRouter()

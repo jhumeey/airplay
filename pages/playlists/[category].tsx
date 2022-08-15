@@ -8,7 +8,7 @@ import Layout from "../../components/layout";
 import prisma from "../../lib/prisma";
 import appScreenshot from "../../public/images/app-screenshot.png"
 import Loader from "../../public/images/three-dot-loader.svg";
-import { ResourcesProps } from "../../types/fetchData";
+import { ResourcesProps } from "../../types/playlist";
 import { getSingleResource } from "../../utils/airtable";
 import { sidebarLinks } from "../../utils/nav-menu";
 

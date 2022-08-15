@@ -14,7 +14,7 @@ model Playlist {
   id         Int      @id @default(autoincrement())
   name       String
   imageLink  String?
-  private    Boolean  @default(false)
+  isPublic    Boolean  @default(false)
   createdAt  DateTime @default(now())
   updatedAt  DateTime @default(now())
   playlistId String
