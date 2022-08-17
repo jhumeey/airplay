@@ -7,7 +7,7 @@ import { getGenre } from "../../utils/genre";
 export default function PlaylistCard({ playlist }: ItemProps) {
   const genre = playlist &&  getGenre(playlist.genre);
   return (
-    <li className="card p-4  cursor-pointer text-gray-brand-02 flex flex-col border border-gray-brand-03 rounded-lg">
+    <li className="card p-4  cursor-pointer text-gray-brand-02 flex flex-col border border-gray-800 rounded-lg">
       <div className="flex flex-col flex-1">
         <div className="flex flex-wrap justify-between">
           <div className="w-full flex items-center justify-between">
