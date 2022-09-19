@@ -1,12 +1,5 @@
 
 export type Playlist = {
-    // id: number;
-    // createdAt?: string;
-    // updatedAt?: string;
-    // name: string;
-    // link: string;
-    // tag: string;
-    // description: string
     json: {
       id: string,
       fields: Play[]
@@ -14,7 +7,9 @@ export type Playlist = {
   }
   
   export interface PlaylistProps {
-    playlists: Play[]
+    playlists: Play[],
+    featuredPlaylist: Play[],
+    trendingPlaylist: Play[]
   }
   
   type Play = {
@@ -23,7 +18,8 @@ export type Playlist = {
       id: number,
       link: string,
       description: string,
-      tag: string,
+      genre: string[],
+      image: string,
       name: string,
       createdAt: string
     }

@@ -33,16 +33,27 @@ export async function getPlaylists() {
   }
 }
 
+export async function getTrendingPlaylists() {
+  try {
+    const records = await resourceTable
+      .select({ filterByFormula: "IF({featured}, TRUE() )" })
+      .all();
+    const minifiedRecords = await getMinifiedRecords(records);
+    return minifiedRecords;
+  } catch {
+    console.error("No data retrieved");
+  }
+}
+
 export async function getFeaturedHero() {
   try {
     const records = await resourceTable
       .select({ filterByFormula: "IF({featuredHero}, TRUE() )" })
       .all();
     const minifiedRecords = await getMinifiedRecords(records);
-    console.log(minifiedRecords);
     return minifiedRecords;
   } catch {
-    console.error("we didnt see any data");
+    console.error("No data retrieved");
   }
 }
 
@@ -55,7 +66,7 @@ export async function getSingleResource(key) {
     const minifiedRecords = await getMinifiedRecords(records);
     return minifiedRecords;
   } catch {
-    console.log("we didnt see any data");
+    console.log("No data retrieved");
   }
 }
 
