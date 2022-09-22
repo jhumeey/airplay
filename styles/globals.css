@@ -6,3 +6,44 @@
 body {
     overflow: hidden
 }
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/font/Gotham-Light.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/font/Gotham-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/font/Gotham-Thin.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../public/font/GothamMedium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.card a{
+  visibility:hidden;
+}
+.card:hover a {
+ visibility:visible;
+ transform: translateY(-0.25rem);
+ transition-property: all;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 200ms;
+}

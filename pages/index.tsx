@@ -9,7 +9,7 @@ import {
   getFeaturedHero,
   getTrendingPlaylists,
 } from "../utils/airtable";
-import PlaylistCover from "../public/images/playlist-cover.jpg";
+import PlaylistCover from "../public/images/cover-img.jpg";
 
 const Home = ({
   playlists,
@@ -18,7 +18,7 @@ const Home = ({
 }: PlaylistProps) => {
   return (
     <>
-      <main className="flex-1 relative z-0 focus:outline-none bg-black-play-01 overflow-y-scroll max-h-screen">
+      <main className="flex-1 relative z-0 focus:outline-none bg-black-play-05 overflow-y-scroll max-h-screen">
         {/* Start main area*/}
         <div className="py-6 px-4 sm:px-6 lg:px-8 overflow-y-scroll">
           <div className="py-4">
@@ -33,7 +33,7 @@ const Home = ({
           </div>
           {featuredPlaylist && (
             <div
-              className=" featured-container rounded-md bg-no-repeat bg-cover opacity-75"
+              className=" featured-container rounded-md bg-no-repeat bg-cover opacity-75 hue-rotate-[15deg]"
               style={{
                 backgroundImage: `url(${PlaylistCover.src})`,
                 minHeight: "300px",
@@ -43,25 +43,13 @@ const Home = ({
                 //filter: 'blur(8px)',
               }}
             >
-              <div className="px-4 py-20">
-                <div className="flex gap-3">
-                  {featuredPlaylist[0].fields.genre.map((genre) => (
-                    <button className="py-3 px-8 rounded-md bg-gray-play-03 text-gray-play-04">
-                      {genre}
-                    </button>
-                  ))}
-                </div>
-                <h1 className="text-4xl text-white py-4">
-                  {featuredPlaylist[0].fields.name}
+              <div className="px-4 py-16 h-[200px]">
+                <h1 className=" text-3xl lg:text-4xl text-white max-w-[500px]">
+                 Discover Refreshing Music Playlist Anytime, Anywere.
                 </h1>
 
-                <div className="my-8">
-                  <a
-                    className="bg-[#E91E63] p-4 text-white rounded-md"
-                    href={featuredPlaylist[0].fields.link}
-                  >
-                    Check Playlist
-                  </a>
+                <div className="py-4">
+                  <p className="text-white text-opacity-50"> Discover spotify playlist that suits your mood all day</p>
                 </div>
               </div>
             </div>
@@ -73,20 +61,20 @@ const Home = ({
               {playlists &&
                 playlists.map((playlist) => (
                   <div
-                    className="rounded-md px-4 py-4 bg-black-play-04 border-2 border-gray-play-05"
+                    className="rounded-md px-4 py-4 bg-black-play-06 card"
                     key={playlist.id}
                   >
                     <div className="flex justify-between mb-7 items-center">
                       <div className="flex gap-3 wrap">
                         {playlist.fields.genre.map((genre) => (
-                          <button className="bg-gray-play-03 py-3 px-4 rounded-md text-gray-play-04">
+                          <button className="bg-gray-play-03 py-3 px-4 rounded-md text-gray-play-07 text-sm">
                             {genre}
                           </button>
                         ))}
                       </div>
                       <div>
                         <a
-                          className="hover:text-green-500 transform hover:-translate-y-1 transition-all duration-200"
+                          className=" duration-200"
                           target="_blank"
                           href={playlist.fields.link}
                           rel="noopener noreferrer"
@@ -121,7 +109,7 @@ const Home = ({
                       alt="playlist-cover"
                     />
                     <div>
-                      <h3 className="text-white text-lg">
+                      <h3 className="text-white text-base">
                         {playlist.fields.name}
                       </h3>
                       {/* <p className="text-gray-play-02">
@@ -140,7 +128,7 @@ const Home = ({
         {/* Start secondary column (hidden on smaller screens) */}
         <div className="py-6 px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <h2 className="text-white text-lg py-4">Trending Playlists</h2>
+            <h2 className="text-white text-lg py-4">Explore Playlists</h2>
             <div className="flex flex-col">
               {trendingPlaylist &&
                 trendingPlaylist.map((trendingPlaylist) => (
@@ -153,10 +141,10 @@ const Home = ({
                       />
                     </div>
                     <div className="flex flex-col gap-3">
-                      <h3 className="text-white text-lg truncate">{trendingPlaylist.fields.name}</h3>
+                      <h3 className="text-white text-base truncate">{trendingPlaylist.fields.name}</h3>
                       <div className="">
                         {trendingPlaylist.fields.genre.map((genre) => (
-                          <p className="text-gray-play-04">{genre}</p>
+                          <p className="text-gray-play-07 text-sm">{genre}</p>
                         ))}
                       </div>
                     </div>
@@ -207,8 +195,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const playlists = await getPlaylists();
   const featuredPlaylist = await getFeaturedHero();
   const trendingPlaylist = await getTrendingPlaylists();
-
-  console.log(playlists)
 
   return {
     props: {

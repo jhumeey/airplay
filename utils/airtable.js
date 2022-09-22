@@ -59,14 +59,13 @@ export async function getFeaturedHero() {
 
 export async function getSingleResource(key) {
   try {
-    console.log(key);
     const records = await resourceTable
       .select({ filterByFormula: `NOT({tag} != "${key}" )` })
       .all();
     const minifiedRecords = await getMinifiedRecords(records);
     return minifiedRecords;
   } catch {
-    console.log("No data retrieved");
+    console.error("No data retrieved");
   }
 }
 
