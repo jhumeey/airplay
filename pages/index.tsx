@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Layout from "../components/layout";
 import { GetStaticProps } from "next";
-import { PlaylistProps } from "../types/playlist";
+import { PlaylistProps, Play} from "../types/playlist";
 import {
   getPlaylists,
   getFeaturedHero,
@@ -60,10 +60,10 @@ const Home = ({
               <div>
                 <div className="flex items-center justify-between">
                   <h3 className="text-white text-2xl font-bold py-4">{key}</h3>
-                  <a className="text-sm text-gray-play-04">SEE ALL</a>
+                  <a href={`/${key}`} className="text-sm text-gray-play-04 hover:underline font-medium">SEE ALL</a>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                  {result[key].slice(0, 5).map((playlist) => (
+                  {result[key].slice(0, 5).map((playlist: Play) => (
                     <div className="mb-6">
                       <div
                         className="rounded-md px-4 py-4 bg-black-play-06 card"

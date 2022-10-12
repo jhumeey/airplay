@@ -12,7 +12,7 @@ export type Playlist = {
     trendingPlaylist: Play[]
   }
   
-  type Play = {
+  export type Play = {
     id: string;
     fields: {
       id: number,
