@@ -168,14 +168,14 @@ export default function Layout({ children }: any) {
                 </nav>
               </div>
               <div className="flex-shrink-0 flex border-t border-gray-play-06 p-4">
-                <a href="#" className="flex-shrink-0 w-full group block">
+                <div className="flex-shrink-0 w-full group block">
                   <div className="flex items-center h-[300px]">
                     <div className="rounded-md bg-black-play-06 p-4 text-center h-full flex flex-col gap-3">
                       <h3 className="text-lg text-white py-6">Got Suggestions for this app ?</h3>
                       <a className="text-base text-white border border-[#472510] p-4 rounded-md" href="https://twitter.com/yakubu_jumoke" target="_blank">Say Hi on Twitter</a>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>

@@ -1,6 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import Layout from "../components/layout";
 import { GetStaticProps } from "next";
 import { PlaylistProps } from "../types/playlist";
@@ -16,21 +14,19 @@ const Home = ({
   featuredPlaylist,
   trendingPlaylist,
 }: PlaylistProps) => {
+  let result = playlists.reduce(function (r, a) {
+    r[a.fields.genre[0]] = r[a.fields.genre[0]] || [];
+    r[a.fields.genre[0]].push(a);
+    return r;
+  }, Object.create(null));
+  const keys = Object.keys(result);
+
+
   return (
     <>
       <main className="flex-1 relative z-0 focus:outline-none bg-black-play-05 overflow-y-scroll max-h-screen">
         {/* Start main area*/}
-        <div className="py-6 px-4 sm:px-6 lg:px-8 overflow-y-scroll">
-          <div className="py-4">
-            {/* <ul className="flex">
-              <li className="text-gray-play-02 pr-4 hover:underline">
-                <a href="/">Music</a>
-              </li>
-              <li className="text-gray-play-02 pr-4 hover:underline">
-                <a href="/">Podcasts</a>
-              </li>
-            </ul> */}
-          </div>
+        <div className="py-6 px-4 sm:px-6 lg:px-12 overflow-y-scroll">
           {featuredPlaylist && (
             <div
               className=" featured-container rounded-md bg-no-repeat bg-cover opacity-75 hue-rotate-[15deg]"
@@ -45,11 +41,14 @@ const Home = ({
             >
               <div className="px-4 py-16 h-[200px]">
                 <h1 className=" text-3xl lg:text-4xl text-white max-w-[500px]">
-                 Discover Refreshing Music Playlist Anytime, Anywere.
+                  Discover Refreshing Music Playlist Anytime, Anywere.
                 </h1>
 
                 <div className="py-4">
-                  <p className="text-white text-opacity-50"> Discover spotify playlist that suits your mood all day</p>
+                  <p className="text-white text-opacity-50">
+                    {" "}
+                    Discover spotify playlist that suits your mood all day
+                  </p>
                 </div>
               </div>
             </div>
@@ -57,76 +56,82 @@ const Home = ({
 
           <div className="py-8">
             <h3 className="text-white text-2xl font-bold py-4">Playlists</h3>
-            <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 w-full">
-              {playlists &&
-                playlists.map((playlist) => (
-                  <div
-                    className="rounded-md px-4 py-4 bg-black-play-06 card"
-                    key={playlist.id}
-                  >
-                    <div className="flex justify-between mb-7 items-center">
-                      <div className="flex gap-3 wrap">
-                        {playlist.fields.genre.map((genre) => (
-                          <button className="bg-gray-play-03 py-3 px-4 rounded-md text-gray-play-07 text-sm">
-                            {genre}
-                          </button>
-                        ))}
-                      </div>
-                      <div>
-                        <a
-                          className=" duration-200"
-                          target="_blank"
-                          href={playlist.fields.link}
-                          rel="noopener noreferrer"
-                        >
-                          <svg
-                            width="24"
-                            height="24"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke="#ffffff"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              d="M17.25 15.25V6.75H8.75"
-                            />
-                            <path
-                              stroke="#ffffff"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              d="M17 7L6.75 17.25"
-                            />
-                          </svg>
-                        </a>
+            {keys.map((key, index) => (
+              <div>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-white text-2xl font-bold py-4">{key}</h3>
+                  <a className="text-sm text-gray-play-04">SEE ALL</a>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                  {result[key].slice(0, 5).map((playlist) => (
+                    <div className="mb-6">
+                      <div
+                        className="rounded-md px-4 py-4 bg-black-play-06 card"
+                        key={playlist.id}
+                      >
+                        <div className="flex justify-between mb-7 items-center">
+                          {/* <div className="flex gap-3 wrap">
+                            {playlist.fields.genre.map((genre) => (
+                              <button className="bg-gray-play-03 py-3 px-4 rounded-md text-gray-play-07 text-sm">
+                                {genre}
+                              </button>
+                            ))}
+                          </div> */}
+                          <div>
+                            <a
+                              className=" duration-200"
+                              target="_blank"
+                              href={playlist.fields.link}
+                              rel="noopener noreferrer"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  stroke="#ffffff"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="1.5"
+                                  d="M17.25 15.25V6.75H8.75"
+                                />
+                                <path
+                                  stroke="#ffffff"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="1.5"
+                                  d="M17 7L6.75 17.25"
+                                />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                        <img
+                          src={playlist.fields.image}
+                          className="rounded-lg w-full h-[200px] object-cover mb-4"
+                          alt="playlist-cover"
+                        />
+                        <div>
+                          <h3 className="text-white text-base">
+                            {playlist.fields.name}
+                          </h3>
+                        </div>
                       </div>
                     </div>
-                    <img
-                      src={playlist.fields.image}
-                      className="rounded-lg w-full h-[200px] object-cover mb-9"
-                      alt="playlist-cover"
-                    />
-                    <div>
-                      <h3 className="text-white text-base">
-                        {playlist.fields.name}
-                      </h3>
-                      {/* <p className="text-gray-play-02">
-                        {playlist.fields.description}
-                      </p> */}
-                    </div>
-                  </div>
-                ))}
-            </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* End main area */}
       </main>
-      <aside className="hidden relative xl:flex xl:flex-col flex-shrink-0 w-80 border-l border-gray-play-01 overflow-y-auto bg-black-play-01">
-        {/* Start secondary column (hidden on smaller screens) */}
-        <div className="py-6 px-4 sm:px-6 lg:px-8">
+      {/* <aside className="hidden relative xl:flex xl:flex-col flex-shrink-0 w-80 border-l border-gray-play-01 overflow-y-auto bg-black-play-01"> */}
+      {/* Start secondary column (hidden on smaller screens) */}
+      {/* <div className="py-6 px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="text-white text-lg py-4">Explore Playlists</h2>
             <div className="flex flex-col">
@@ -179,8 +184,7 @@ const Home = ({
             </div>
           </div>
         </div>
-        {/* End secondary column */}
-      </aside>
+      </aside> */}
     </>
   );
 };
@@ -193,6 +197,7 @@ Home.getLayout = function getLayout(page: React.ReactElement) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const playlists = await getPlaylists();
+  //console.log(playlists);
   const featuredPlaylist = await getFeaturedHero();
   const trendingPlaylist = await getTrendingPlaylists();
 
