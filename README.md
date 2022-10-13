@@ -1,27 +1,59 @@
-# Next.js + Tailwind CSS Example
+# Airply Web Application
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Live App 👉 https://airplayy.vercel.app
+
+
+## Prerequisites
+
+You will need [Node.js](https://nodejs.org) version 12.0 or greater installed on your system.
+
+## Setup
+
+Get the code by either cloning this repository using git
+
+```
+git clone https://github.com/giselle2323/airplay.git
+```
+
+... or [downloading source code](https://github.com/giselle2323/airplay/archive/refs/heads/main.zip) code as a zip archive.
+
+Once downloaded, open the terminal in the project directory, and install dependencies with:
+
+```
+npm install
+```
+
+If you're running your own  project with the playlist dataset sample on Airtable, go to `.env` and change the following lines:
+
+```
+  NEXT_PUBLIC_AIRTABLE_API_KEY='YOUR VALUE'
+  NEXT_PUBLIC_AIRTABLE_BASE_ID='YOUR VALUE'
+```
+
+You can locate these details by going to your account settings on Airtable.
+ Note the airtable must follow the following table format:
+
+ ```
+    status
+    image
+    name
+    link
+    followers
+    genre
+
+ ```
+ You can check the types folder to understand more on what data is needed.
+
+Then start the example app with:
+
+```
+npm run dev
+```
+
+The app should now be up and running at http://localhost:3000 🚀
 
 ## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Deploy it to the cloud with Vercel([Documentation](https://nextjs.org/docs/deployment)).
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
