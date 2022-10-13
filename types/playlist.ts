@@ -12,6 +12,10 @@ export interface PlaylistProps {
   genre: string
 }
 
+export interface PlaylistCardProps {
+  playlist: Play
+}
+
 export type Play = {
   id: string;
   fields: {

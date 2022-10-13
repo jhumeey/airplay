@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Layout from "../components/layout";
+import Layout from "../components/Layout"
 import { GetStaticProps } from "next";
 import { PlaylistProps, Play } from "../types/playlist";
 import {
@@ -8,6 +8,7 @@ import {
   getTrendingPlaylists,
 } from "../utils/airtable";
 import PlaylistCover from "../public/images/cover-img.jpg";
+import PlaylistCard from "../components/PlaylistCard";
 
 const Home = ({
   playlists,
@@ -15,7 +16,6 @@ const Home = ({
   trendingPlaylist,
 }: PlaylistProps) => {
   let result = playlists.reduce(function (r, a) {
-    console.log(r[a.fields.genre]);
     r[a.fields.genre] = r[a.fields.genre] || [];
     r[a.fields.genre].push(a);
     return r;
@@ -68,55 +68,7 @@ const Home = ({
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4">
                   {result[key].slice(0, 5).map((playlist: Play) => (
-                    <div className="mb-6">
-                      <div
-                        className="rounded-md px-4 py-4 bg-black-play-06 card"
-                        key={playlist.id}
-                      >
-                        <div className="relative">
-                          <a
-                            className="duration-200 absolute bottom-0 right-0  h-10 w-10 bg-white rounded-full flex items-center justify-center"
-                            target="_blank"
-                            href={playlist.fields.link}
-                            rel="noopener noreferrer"
-                          >
-                            <svg
-                              width="24"
-                              height="24"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                stroke="green"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M17.25 15.25V6.75H8.75"
-                              />
-                              <path
-                                stroke="green"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M17 7L6.75 17.25"
-                              />
-                            </svg>
-                          </a>
-
-                          <img
-                            src={playlist.fields.image}
-                            className="rounded-lg w-full h-[200px] object-cover mb-4"
-                            alt="playlist-cover"
-                          />
-                        </div>
-
-                        <div>
-                          <h3 className="text-white text-base">
-                            {playlist.fields.name}
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
+                    <PlaylistCard playlist={playlist} />
                   ))}
                 </div>
               </div>
