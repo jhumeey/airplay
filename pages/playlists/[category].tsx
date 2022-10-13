@@ -13,9 +13,7 @@ const CategoryPage = ({ playlists, genre }: PlaylistProps) => {
             <h3 className="text-white text-2xl font-bold py-4 capitalize">{genre}</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4">
               {playlists.map((playlist) => (
-
-                <PlaylistCard playlist={playlist} />
-                
+                <PlaylistCard playlist={playlist} /> 
               ))}
             </div>
           </div>
