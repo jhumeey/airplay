@@ -12,8 +12,7 @@ import PlaylistCard from "../components/PlaylistCard";
 
 const Home = ({
   playlists,
-  featuredPlaylist,
-  trendingPlaylist,
+  featuredPlaylist
 }: PlaylistProps) => {
   let result = playlists.reduce(function (r, a) {
     r[a.fields.genre] = r[a.fields.genre] || [];
