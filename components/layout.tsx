@@ -1,12 +1,14 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { HomeIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { HomeIcon, MenuIcon, XIcon, StarIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from "react";
 
 import Logo from "../public/images/airplay-logo.svg";
 
-const navigation = [{ name: "Home", href: "#", icon: HomeIcon, current: false }];
+const navigation = [
+  { name: "Home", href: "/", icon: HomeIcon, current: false },
+  { name: "Trending", href: "/trending", icon: StarIcon, current: false },
+];
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -17,7 +19,6 @@ export default function Layout({ children }: any) {
 
   return (
     <>
-
       <div className="h-full flex min-h-screen">
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
@@ -74,7 +75,7 @@ export default function Layout({ children }: any) {
                     <Image src={Logo} width={150} height={100} />
                   </div>
                   <nav aria-label="Sidebar" className="mt-5">
-                    <div className="px-2 space-y-1">
+                    <div className="px-2 space-y-1 border border-b border-[#282828]">
                       {navigation.map((item) => (
                         <a
                           key={item.name}
@@ -98,6 +99,9 @@ export default function Layout({ children }: any) {
                           {item.name}
                         </a>
                       ))}
+                    </div>
+                    <div className="b">
+
                     </div>
                   </nav>
                 </div>
@@ -140,7 +144,7 @@ export default function Layout({ children }: any) {
                   <Image src={Logo} width={150} height={100} />
                 </div>
                 <nav className="mt-5 flex-1" aria-label="Sidebar">
-                  <div className="px-2 space-y-1">
+                  <div className="px-2 space-y-1 py-4 border-b border-[#282828]">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -165,14 +169,29 @@ export default function Layout({ children }: any) {
                       </a>
                     ))}
                   </div>
+                  <div className="py-4 px-4 space-y-1 flex flex-col gap-4">
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/heart-break">Heartbreak Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/love">Love Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/sad">Sad Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/workout">Workout Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/workout">Chill Songs</a>
+                  </div>
                 </nav>
               </div>
               <div className="flex-shrink-0 flex border-t border-gray-play-06 p-4">
                 <div className="flex-shrink-0 w-full group block">
                   <div className="flex items-center h-[300px]">
                     <div className="rounded-md bg-black-play-06 p-4 text-center h-full flex flex-col gap-3">
-                      <h3 className="text-lg text-white py-6">Got Suggestions for this app ?</h3>
-                      <a className="text-base text-white border border-[#472510] p-4 rounded-md" href="https://twitter.com/yakubu_jumoke" target="_blank">Say Hi on Twitter</a>
+                      <h3 className="text-lg text-white py-6">
+                        Got Suggestions for this app ?
+                      </h3>
+                      <a
+                        className="text-base text-white border border-[#472510] p-4 rounded-md"
+                        href="https://twitter.com/yakubu_jumoke"
+                        target="_blank"
+                      >
+                        Say Hi on Twitter
+                      </a>
                     </div>
                   </div>
                 </div>

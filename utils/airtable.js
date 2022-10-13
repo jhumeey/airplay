@@ -60,7 +60,7 @@ export async function getFeaturedHero() {
 export async function getSingleResource(key) {
   try {
     const records = await resourceTable
-      .select({ filterByFormula: `NOT({tag} != "${key}" )` })
+      .select({ filterByFormula: `NOT({genre} != "${key}" )` })
       .all();
     const minifiedRecords = await getMinifiedRecords(records);
     return minifiedRecords;
