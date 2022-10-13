@@ -20,6 +20,7 @@ const minifyRecord = (record) => {
 };
 
 const resourceTable = base("playlists");
+const specialsTable = base("specials");
 
 export async function getPlaylists() {
   try {
@@ -60,6 +61,17 @@ export async function getFeaturedHero() {
 export async function getSingleResource(key) {
   try {
     const records = await resourceTable
+      .select({ filterByFormula: `NOT({genre} != "${key}" )` })
+      .all();
+    const minifiedRecords = await getMinifiedRecords(records);
+    return minifiedRecords;
+  } catch {
+    console.error("No data retrieved");
+  }
+}
+export async function getSpecialSingleResource(key) {
+  try {
+    const records = await specialsTable
       .select({ filterByFormula: `NOT({genre} != "${key}" )` })
       .all();
     const minifiedRecords = await getMinifiedRecords(records);

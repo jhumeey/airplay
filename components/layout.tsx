@@ -7,7 +7,7 @@ import Logo from "../public/images/airplay-logo.svg";
 
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon, current: false },
-  { name: "Trending", href: "/trending", icon: StarIcon, current: false },
+  { name: "Trending", href: "/", icon: StarIcon, current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -35,7 +35,7 @@ export default function Layout({ children }: any) {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 bg-black-play-01 bg-opacity-75" />
+              <Dialog.Overlay className="fixed inset-0 bg-black-play-01 bg-opacity-90" />
             </Transition.Child>
             <Transition.Child
               as={Fragment}
@@ -75,7 +75,7 @@ export default function Layout({ children }: any) {
                     <Image src={Logo} width={150} height={100} />
                   </div>
                   <nav aria-label="Sidebar" className="mt-5">
-                    <div className="px-2 space-y-1 border border-b border-[#282828]">
+                    <div className="px-2 space-y-1 py-4 border-b border-[#282828]">
                       {navigation.map((item) => (
                         <a
                           key={item.name}
@@ -100,9 +100,14 @@ export default function Layout({ children }: any) {
                         </a>
                       ))}
                     </div>
-                    <div className="b">
-
-                    </div>
+                    <div className="py-4 px-4 space-y-1 flex flex-col gap-4">
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/heart-break">Heartbreak Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/love">Love Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/sad">Sad Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/workout">Workout Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/chill">Chill Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/sleep">Sleep Songs</a>
+                  </div>
                   </nav>
                 </div>
                 {/* <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
@@ -170,20 +175,21 @@ export default function Layout({ children }: any) {
                     ))}
                   </div>
                   <div className="py-4 px-4 space-y-1 flex flex-col gap-4">
-                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/heart-break">Heartbreak Songs</a>
-                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/love">Love Songs</a>
-                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/sad">Sad Songs</a>
-                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/workout">Workout Songs</a>
-                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/workout">Chill Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/heartbreak">Heartbreak Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/love">Love Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/sad">Sad Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/workout">Workout Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/chill">Chill Songs</a>
+                    <a className="text-gray-play-04 hover:bg-black-play-06 hover:text-gray-play-07 text-sm" href="/playlists/sleep">Sleep Songs</a>
                   </div>
                 </nav>
               </div>
               <div className="flex-shrink-0 flex border-t border-gray-play-06 p-4">
                 <div className="flex-shrink-0 w-full group block">
-                  <div className="flex items-center h-[300px]">
+                  <div className="flex items-center h-[250px]">
                     <div className="rounded-md bg-black-play-06 p-4 text-center h-full flex flex-col gap-3">
                       <h3 className="text-lg text-white py-6">
-                        Got Suggestions for this app ?
+                        Made With ❤️ by Aminat
                       </h3>
                       <a
                         className="text-base text-white border border-[#472510] p-4 rounded-md"

@@ -29,25 +29,25 @@ const Home = ({
         <div className="py-6 px-4 sm:px-6 lg:px-12 overflow-y-scroll">
           {featuredPlaylist && (
             <div
-              className=" featured-container rounded-md bg-no-repeat bg-cover opacity-75 hue-rotate-[15deg]"
+              className=" featured-container rounded-md bg-no-repeat bg-cover opacity-75 "
               style={{
                 backgroundImage: `url(${PlaylistCover.src})`,
-                minHeight: "300px",
-                backgroundSize: "cover",
+                minHeight: "350px",
+                backgroundSize: "100%",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 //filter: 'blur(8px)',
               }}
             >
               <div className="px-4 py-16 h-[200px]">
-                <h1 className=" text-3xl lg:text-4xl text-white max-w-[500px]">
-                  Discover Refreshing Music Playlist Anytime, Anywere.
+                <h1 className=" text-3xl lg:text-5xl text-white max-w-[600px]">
+                  Discover Refreshing Playlists Anytime, Anywhere.
                 </h1>
 
                 <div className="py-4">
-                  <p className="text-white text-opacity-50">
+                  <p className="text-white text-lg text-opacity-50">
                     {" "}
-                    Discover spotify playlist that suits your mood all day
+                    Discover spotify playlists that suits your mood all day.
                   </p>
                 </div>
               </div>
@@ -58,7 +58,7 @@ const Home = ({
             {keys.map((key, index) => (
               <div>
                 <div className="flex items-center justify-between">
-                  <h3 className="text-white text-2xl font-bold py-4">{key}</h3>
+                  <h3 className="text-white text-2xl font-bold py-4 capitalize">{key}</h3>
                   <a
                     href={`/playlists/${key}`}
                     className="text-sm text-gray-play-04 hover:underline font-medium"
