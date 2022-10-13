@@ -38,7 +38,6 @@ export default function PlaylistCard({ playlist }: PlaylistCardProps) {
             alt="playlist-cover"
           />
         </div>
-
         <div>
           <h3 className="text-white text-base">{playlist.fields.name}</h3>
         </div>
