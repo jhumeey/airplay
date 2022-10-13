@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
 import { GetStaticProps } from "next";
 import { PlaylistProps, Play } from "../types/playlist";
 import {
